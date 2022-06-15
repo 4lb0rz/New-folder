@@ -1,0 +1,17 @@
+name: CI
+on: [push]
+jobs:
+  exo11_initiale_nom_push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: run tests
+        run : |
+         pip install pytest
+         pytest
+      - name: build docker image
+        run:
+         docker build -t exo11_initiale_nom .
+      - name: run docker image
+        run:
+         docker run exo11_initiale_nom
