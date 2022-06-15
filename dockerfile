@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 RUN apt-get update
 
-WORKDIR /ibrahim
+WORKDIR /Alborz
 
 RUN apt-get install python3 -y
 
